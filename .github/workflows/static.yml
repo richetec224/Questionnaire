@@ -1,43 +1,18 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firefighter VR Training Questionnaire</title>
+</head>
+<body>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+    <h1>Firefighter Certification Training with VR</h1>
+    <p>This questionnaire is part of a study on the effectiveness of Virtual Reality (VR) in firefighter training. Your participation is voluntary, and all responses are anonymous. The information collected will be used for academic and engineering certification purposes.</p>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    <h2>Download the Questionnaire</h2>
+    <p><a href="Questionnaire-firefighter.docx" download>Download the Questionnaire Here</a></p>
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    <h2>Submit Your Responses</h2>
+    <p>After completing the questionnaire, please email it to <a href="mailto:rkwinders@outlook.com">rkwinders@outlook.com</a>.</p>
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+</body>
+</html>
